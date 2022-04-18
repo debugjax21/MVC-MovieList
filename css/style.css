@@ -1,0 +1,219 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: 5px 0;
+}
+
+table {
+    margin: auto;
+    border-spacing: 0;
+    padding: 30px;
+    padding-bottom: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.553);
+}
+
+td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.553);;
+    padding: 15px;
+}
+
+th {
+    padding: 15px;
+}
+
+fieldset {
+    background-image: url("/img/movieBk.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    opacity: 0.6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+}
+
+label[for="nameEdit"], label[for="year"], label[for="pRating"] {
+    display: inline;
+}
+
+label[for="pRating"] {
+    position: relative;
+}
+
+input[type="text"], input[type="number"] , select  {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.769);
+    height: 20px;
+}
+
+
+input[type="text"], select {
+    margin: 10px 0;
+
+}
+
+input[type="text"], input[type="number"] {
+    width: 200px;
+}
+
+input[type="text"] {
+    margin-left: 70px;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin: 6px 3px;
+}
+
+input[type="checkbox"] {
+    margin: 15px 0;
+}
+
+.tableBtns {
+    padding: 5px;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.editBtn, .deleteBtn, #addMovieBtn, #saveBtn, #cancelBtn {
+    transition-duration: 0.4s;
+    border: none;
+    font-weight: bold;
+    color: white;
+    height: 30px;
+}
+
+.editBtn, .deleteBtn, #saveBtn, #cancelBtn {
+    width: 70px;
+    border-radius: 5px;
+}
+
+.editBtn {
+    background-color: rgb(239,166,63);
+
+}
+
+.editBtn:hover {
+    background-color: rgb(225, 191, 140);
+}
+
+.deleteBtn {
+    background-color: rgba(255, 0, 0, 0.806);
+
+}
+
+.validationError {
+    color: red;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#saveError {
+    color: rgb(255, 188, 188);
+    display: inline;
+}
+
+.deleteBtn:hover {
+    background-color: rgba(255, 0, 0, 0.674);
+}
+
+#addMovieBtn {
+    display: block;
+    margin: 15px auto;
+    background-color: rgba(0, 130, 0, 0.696);
+    width: 130px;
+    border-radius: 3px;
+    }
+    
+#addMovieBtn:hover {
+    background-color: rgba(0, 130, 0, 0.482);
+}
+
+#saveBtn, #cancelBtn {
+    margin: 10px 5px;
+}
+
+#saveBtn {
+    background-color: rgb(0, 0, 221);
+
+}
+
+#saveBtn:hover {
+    background-color: rgb(52, 52, 209);
+
+}
+
+#cancelBtn {
+    background-color: grey;
+}
+
+#cancelBtn:hover {
+    background-color: rgb(41, 40, 40);
+
+}
+
+.starReview {
+    width: 30px;
+}
+
+#star {
+    position: absolute;
+    left: 0;  
+    bottom: 0;
+}
+
+#movieEditArea {
+    width: 80%;
+    margin: auto;
+}
+
+#outerContainer {
+    margin: auto;
+    padding: 5% 10%;
+    width: 80%;
+}
+
+#mRated {
+    width: 100px;
+}
+
+#mRatedError, #yearError, #pRatingError {
+    display: inline;
+}
+
+#pRating {
+    margin-left: 56px;
+}
+
+
+
+
+/* disable arrows from Number input
+For chrome, Safari, Edge, Opera : */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* For firefox */
+input[type=number]{
+    -moz-appearance: textfield;
+}

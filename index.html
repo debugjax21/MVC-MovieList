@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/scripts/model.js" type="text/javascript"></script>
+    <script src="/scripts/control.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Movies</title>
+</head>
+<body>
+    <div id="outerContainer">
+        <div id="movieEditArea">
+            <form name="movieEditForm">
+                <h1 id="formTitle">Edit Movie</h1>
+                <fieldset form="movieEditForm">
+                    <label for="nameEdit">
+                        Title:
+                        <input type="text" name="name" id="nameEdit"  />
+                        <select name="mRated" id="mRated">
+                            <option selected disabled value="default">Rated</option>
+                            <option value="g">G</option>
+                            <option value="pg">PG</option>
+                            <option value="pg-13">PG-13</option>
+                            <option value="r">R</option>
+                        </select>
+                    </label>
+                    <div class="validationError" id="mRatedError"></div> <!--Inline css-->
+                    <div class="validationError" id="nameError"></div>
+
+                    <label for="year">
+                        Year Produced:
+                        <input type="number" id="year" min="1888">
+                    </label>    
+                    <div class="validationError" id="yearError"></div>
+                    <div>
+                        <label for="pRating">
+                            <img id="star" class="starReview" src="/img/transparentStar.png">
+                            <select name="pRating" id="pRating">
+                                <option disabled selected value="0" >Select an option</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </label>
+                        <div class="validationError" id="pRatingError"></div>
+                    </div>
+                    <p>Genre:</p>
+                    <div class="validationError" id="radioError"></div>
+                    <label for="actAdvRadio">
+                        <input type="radio" name="genreRadio" id="actAdvRadio" value="actAdv">
+                        Action/Adventure
+                    </label>
+                    <label for="dramaRadio">
+                        <input type="radio" name="genreRadio" id="dramaRadio" value="drama">
+                        Drama
+                    </label>
+                    <label for="comedyRadio">
+                        <input type="radio" name="genreRadio" id="comedyRadio" value="comedy">
+                        Comendy
+                    </label>
+                    <label for="romanceRadio">
+                        <input type="radio" name="genreRadio" id="romanceRadio" value="romance">
+                        Romance
+                    </label>
+                    <label for="sciFanRadio">
+                        <input type="radio" name="genreRadio" id="sciFanRadio" value="sciFan">
+                        Sci-fi/Fantasy
+                    </label>
+
+                    <label for="isBlueray">
+                        Blue-ray?
+                        <input type="checkbox" id="isBlueray">
+                    </label>
+
+                    <button type="button" id="saveBtn">Save</button> 
+                    <button type="button" id="cancelBtn">Cancel</button>
+                    <div class="validationError" id="saveError"></div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="movieListArea">
+            <h1>Movies</h1>
+            <button type="button" id="addMovieBtn">Add Movie</button>
+
+            <table id="moviesTable">
+                <thead>
+                    <th>Title</th>
+                    <th>Rated</th>
+                    <th>Rating</th>
+                    <th>Format</th>
+                    <th>&nbsp;</th>
+                </thead>
+            </table>
+        </div>
+</div>
+    <script> onPageLoad();</script>
+</body>
+</html>
